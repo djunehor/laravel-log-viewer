@@ -140,11 +140,8 @@ class LaravelLogViewerTest extends OrchestraTestCase
         $laravel_log_viewer->setStoragePath(__DIR__);
         $data = $laravel_log_viewer->foldersAndFiles();
         $this->assertIsArray($data);
-
-        $this->assertIsArray($data);
         $this->assertNotEmpty($data);
         
-        $this->assertStringContainsString('tests',  $data[count(explode($data[0], '/')) - 1]);
     }
 
     public function testGetFolderFiles()
